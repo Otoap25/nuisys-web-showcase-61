@@ -41,6 +41,8 @@ All colors MUST be HSL.
     --tech-teal: 197 71% 72%;
     --tech-light: 214 13% 95%;
     --tech-gray: 215 16% 80%;
+    --lightning-blue: 215 100% 50%;
+    --lightning-blue-dark: 215 100% 35%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(214 84% 12%), hsl(197 71% 52%));
@@ -171,7 +173,7 @@ All colors MUST be HSL.
   /* Page-specific backgrounds */
   .services-background {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--tech-light)) 100%);
+    background: linear-gradient(135deg, hsl(var(--lightning-blue)) 0%, hsl(var(--lightning-blue-dark)) 100%);
   }
   
   .services-background::before {
