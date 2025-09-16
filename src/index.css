@@ -172,86 +172,37 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--tech-light)) 100%);
   }
   
-  /* Page-specific backgrounds */
+  /* Page-specific backgrounds - Room-like immersive experiences */
   .services-background {
     position: relative;
-    background: 
-      linear-gradient(135deg, 
-        hsla(var(--sky-light), 0.3) 0%, 
-        hsla(var(--water-sky), 0.4) 25%, 
-        hsla(var(--crystal-blue), 0.2) 50%, 
-        hsla(var(--water-deep), 0.3) 75%, 
-        hsla(var(--background), 0.8) 100%
-      ),
-      radial-gradient(ellipse at top, 
-        hsla(var(--water-sky), 0.1) 0%, 
-        transparent 70%
-      ),
-      radial-gradient(ellipse at bottom right, 
-        hsla(var(--crystal-blue), 0.15) 0%, 
-        transparent 50%
-      );
-  }
-  
-  .services-background::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b3e5fc' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3Ccircle cx='80' cy='40' r='1'/%3E%3Ccircle cx='50' cy='70' r='1.2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-      radial-gradient(circle at 20% 30%, hsla(var(--water-sky), 0.08) 0%, transparent 60%),
-      radial-gradient(circle at 80% 20%, hsla(var(--crystal-blue), 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 60% 80%, hsla(var(--sky-light), 0.05) 0%, transparent 70%);
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: -1;
-    animation: float 8s ease-in-out infinite;
-  }
-  
-  .services-background::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      linear-gradient(45deg, transparent 48%, hsla(var(--crystal-blue), 0.02) 50%, transparent 52%),
-      linear-gradient(-45deg, transparent 48%, hsla(var(--water-sky), 0.02) 50%, transparent 52%);
-    opacity: 0.4;
-    pointer-events: none;
-    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/security-systems.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   
   .about-background {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--tech-light)) 100%);
-  }
-  
-  .about-background::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23197faa' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40v40zm0 40v-40l40 40h-40z'/%3E%3C/g%3E%3C/svg%3E"),
-      linear-gradient(45deg, hsl(214 84% 12% / 0.03) 25%, transparent 25%),
-      linear-gradient(-45deg, hsl(197 71% 52% / 0.03) 25%, transparent 25%);
-    opacity: 0.6;
-    pointer-events: none;
-    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/infrastructure.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   
   .contact-background {
     position: relative;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--tech-light)) 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/power-solutions.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   
+  /* Universal room atmosphere overlay for all page backgrounds */
+  .services-background::before,
+  .about-background::before,
   .contact-background::before {
     content: '';
     position: fixed;
@@ -259,10 +210,42 @@ All colors MUST be HSL.
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-      url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23197faa' fill-opacity='0.06'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2L74 40h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-      radial-gradient(circle at 50% 50%, hsl(197 71% 52% / 0.04) 0%, transparent 50%);
+    background: 
+      radial-gradient(circle at 25% 25%, hsla(var(--tech-blue), 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsla(var(--tech-teal), 0.08) 0%, transparent 50%),
+      linear-gradient(135deg, transparent 0%, hsla(var(--primary), 0.03) 50%, transparent 100%);
     opacity: 0.6;
+    pointer-events: none;
+    z-index: -1;
+    animation: digital-flow 20s ease-in-out infinite;
+  }
+  
+  /* Subtle tech grid overlay */
+  .services-background::after,
+  .about-background::after,
+  .contact-background::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        hsla(var(--tech-blue), 0.02) 2px,
+        hsla(var(--tech-blue), 0.02) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        hsla(var(--tech-teal), 0.02) 2px,
+        hsla(var(--tech-teal), 0.02) 4px
+      );
+    opacity: 0.3;
     pointer-events: none;
     z-index: -1;
   }
@@ -392,5 +375,36 @@ All colors MUST be HSL.
   /* Button Pulse */
   .pulse-border {
     @apply relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-tech-teal/20 before:animate-ping;
+  }
+}
+
+/* Keyframe Animations for Room Atmospheres */
+@keyframes digital-flow {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  33% {
+    transform: translateX(-2px) translateY(-1px) scale(1.02);
+  }
+  66% {
+    transform: translateX(2px) translateY(1px) scale(0.98);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes animate-glow {
+  0%, 100% {
+    box-shadow: var(--shadow-tech);
+  }
+  50% {
+    box-shadow: var(--shadow-accent);
   }
 }
