@@ -1,0 +1,141 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Battery, Zap, Shield, Monitor, Settings, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import powerImage from "@/assets/power-solutions.jpg";
+
+const UPSSystemsPage = () => {
+  const features = [
+    {
+      icon: Zap,
+      title: "Uninterrupted Power",
+      description: "Seamless power transition during outages with zero downtime"
+    },
+    {
+      icon: Shield,
+      title: "Power Protection",
+      description: "Surge protection and voltage regulation to protect equipment"
+    },
+    {
+      icon: Monitor,
+      title: "Remote Monitoring",
+      description: "Real-time monitoring and alerts for power status and battery health"
+    },
+    {
+      icon: Settings,
+      title: "Automatic Transfer",
+      description: "Instant switchover to backup power without manual intervention"
+    },
+    {
+      icon: Clock,
+      title: "Extended Runtime",
+      description: "Configurable backup duration from minutes to hours based on needs"
+    },
+    {
+      icon: Battery,
+      title: "Scalable Solutions",
+      description: "Modular UPS systems that grow with your business requirements"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen services-background">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 gradient-subtle">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8 animate-fade-in-up">
+            <Link 
+              to="/services/power" 
+              className="inline-flex items-center space-x-2 text-tech-teal hover:text-tech-blue transition-colors duration-300 mb-6 animated-underline"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Power Solutions</span>
+            </Link>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center shadow-card">
+                    <Battery className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h1 className="text-responsive-xl font-bold text-tech-blue">UPS Systems</h1>
+                    <p className="text-tech-teal font-semibold text-lg">Uninterrupted Power Supply</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
+                  Professional UPS system installation and maintenance for critical business operations, 
+                  providing seamless power protection and extended backup capabilities.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="hero" className="hover-lift">
+                    Get UPS Quote
+                  </Button>
+                  <Link to="/contact">
+                    <Button variant="outline-tech" className="hover-scale w-full sm:w-auto">
+                      Contact Specialists
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute inset-0 gradient-tech rounded-3xl opacity-10 blur-3xl animate-glow"></div>
+                <img
+                  src={powerImage}
+                  alt="Professional UPS Systems Installation"
+                  className="rounded-3xl shadow-card w-full h-auto hover-lift relative"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 space-y-6">
+            <h2 className="text-responsive-lg font-bold text-tech-blue">
+              Advanced UPS System Features
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our UPS systems provide reliable backup power and comprehensive protection 
+              for your critical business operations.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card 
+                key={index}
+                className="p-6 hover:shadow-card transition-all duration-300 border-muted hover-lift group cursor-pointer"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-lg bg-tech-light flex items-center justify-center group-hover:bg-tech-teal/10 transition-colors duration-300">
+                    <feature.icon className="w-6 h-6 text-tech-teal group-hover:scale-110 transition-transform duration-200" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-foreground text-lg mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default UPSSystemsPage;
