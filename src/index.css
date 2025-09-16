@@ -24,7 +24,7 @@ All colors MUST be HSL.
     --secondary-foreground: 215 25% 27%;
 
     --muted: 214 13% 95%;
-    --muted-foreground: 215 16% 47%;
+    --muted-foreground: 215 16% 75%;
 
     --accent: 197 71% 52%;
     --accent-foreground: 0 0% 98%;
@@ -37,10 +37,10 @@ All colors MUST be HSL.
     --ring: 214 84% 12%;
 
     /* Custom design tokens for Nuisys */
-    --tech-blue: 214 84% 12%;
-    --tech-teal: 197 71% 52%;
+    --tech-blue: 214 84% 65%;
+    --tech-teal: 197 71% 72%;
     --tech-light: 214 13% 95%;
-    --tech-gray: 215 16% 47%;
+    --tech-gray: 215 16% 80%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(214 84% 12%), hsl(197 71% 52%));
