@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-tech.jpg";
+import datacenterBg from "@/assets/datacenter-background.jpg";
 
 const Hero = () => {
   const features = [
@@ -12,7 +13,15 @@ const Hero = () => {
   ];
 
   return (
-    <section className="pt-20 min-h-screen flex items-center gradient-subtle overflow-hidden">
+    <section 
+      className="pt-20 min-h-screen flex items-center gradient-subtle overflow-hidden relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${datacenterBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
           {/* Content */}
