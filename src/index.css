@@ -172,35 +172,196 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--tech-light)) 100%);
   }
   
-  /* Page-specific backgrounds - Room-like immersive experiences */
+  /* Page-specific backgrounds - Realistic immersive room experiences */
   .services-background {
     position: relative;
-    background: linear-gradient(135deg, 
-      hsla(var(--water-sky), 0.1) 0%, 
-      hsla(var(--crystal-blue), 0.05) 25%,
-      hsla(var(--sky-light), 0.08) 50%,
-      hsla(var(--water-deep), 0.06) 75%,
-      hsla(var(--water-sky), 0.1) 100%
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/datacenter-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
+    animation: subtle-zoom 20s ease-in-out infinite alternate;
   }
   
   .about-background {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/infrastructure.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/mission-workspace.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    animation: subtle-zoom 25s ease-in-out infinite alternate;
   }
   
   .contact-background {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/power-solutions.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/datacenter-room.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    animation: subtle-zoom 22s ease-in-out infinite alternate;
+  }
+
+  .cloud-services-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/cloud-ai-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 18s ease-in-out infinite alternate;
+  }
+
+  .infrastructure-services-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/datacenter-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 24s ease-in-out infinite alternate;
+  }
+
+  .power-services-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/power-facility.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 21s ease-in-out infinite alternate;
+  }
+
+  .security-services-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/security-control-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 19s ease-in-out infinite alternate;
+  }
+
+  /* Individual service page backgrounds - Each reflects specific service */
+  .generators-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/power-facility.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 23s ease-in-out infinite alternate;
+  }
+
+  .ups-systems-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/power-facility.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 20s ease-in-out infinite alternate;
+  }
+
+  .solar-systems-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/power-facility.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 26s ease-in-out infinite alternate;
+  }
+
+  .cctv-systems-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/security-control-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 17s ease-in-out infinite alternate;
+  }
+
+  .alarm-systems-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/security-control-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 22s ease-in-out infinite alternate;
+  }
+
+  .door-access-control-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/security-control-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 19s ease-in-out infinite alternate;
+  }
+
+  .network-setup-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/network-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 21s ease-in-out infinite alternate;
+  }
+
+  .data-cabling-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/network-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 24s ease-in-out infinite alternate;
+  }
+
+  .office-relocation-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/src/assets/datacenter-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 25s ease-in-out infinite alternate;
+  }
+
+  .cloud-infrastructure-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/cloud-ai-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 18s ease-in-out infinite alternate;
+  }
+
+  .saas-implementation-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/cloud-ai-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 23s ease-in-out infinite alternate;
+  }
+
+  .ai-automation-background {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/src/assets/cloud-ai-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: subtle-zoom 20s ease-in-out infinite alternate;
   }
   
   /* Universal room atmosphere overlay for all page backgrounds */
@@ -392,6 +553,12 @@ All colors MUST be HSL.
   66% {
     transform: translateX(2px) translateY(1px) scale(0.98);
   }
+}
+
+/* Subtle zoom animation for immersive room feeling */
+@keyframes subtle-zoom {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.05); }
 }
 
 @keyframes float {
