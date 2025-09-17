@@ -175,10 +175,13 @@ All colors MUST be HSL.
   /* Page-specific backgrounds - Room-like immersive experiences */
   .services-background {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/security-systems.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, 
+      hsla(var(--water-sky), 0.1) 0%, 
+      hsla(var(--crystal-blue), 0.05) 25%,
+      hsla(var(--sky-light), 0.08) 50%,
+      hsla(var(--water-deep), 0.06) 75%,
+      hsla(var(--water-sky), 0.1) 100%
+    );
     min-height: 100vh;
   }
   
