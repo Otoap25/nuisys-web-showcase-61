@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import infrastructureImage from "@/assets/infrastructure.jpg";
+import infrastructureHeroBg from "@/assets/infrastructure-hero-bg.jpg";
 
 const InfrastructureServicesPage = () => {
   const services = [
@@ -61,12 +62,20 @@ const InfrastructureServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 gradient-subtle">
+      <section 
+        className="pt-32 pb-20 relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${infrastructureHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8 animate-fade-in-up">
             <Link 
               to="/services" 
-              className="inline-flex items-center space-x-2 text-tech-teal hover:text-tech-blue transition-colors duration-300 animated-underline"
+              className="inline-flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-300 animated-underline"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Services</span>
@@ -77,12 +86,12 @@ const InfrastructureServicesPage = () => {
                 <Server className="w-8 h-8 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-responsive-xl font-bold text-tech-blue">Infrastructure & Cabling</h1>
-                <p className="text-tech-teal font-semibold text-xl">Building Your Network Foundation</p>
+                <h1 className="text-responsive-xl font-bold text-white drop-shadow-lg">Infrastructure & Cabling</h1>
+                <p className="text-white/90 font-semibold text-xl drop-shadow-md">Building Your Network Foundation</p>
               </div>
             </div>
             
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl leading-relaxed">
+            <p className="text-lg lg:text-xl text-white/90 max-w-4xl leading-relaxed drop-shadow-md">
               Professional infrastructure solutions from office relocations to structured cabling systems, 
               ensuring your network foundation is robust, scalable, and future-ready.
             </p>

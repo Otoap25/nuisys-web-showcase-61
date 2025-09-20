@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import securityImage from "@/assets/security-systems.jpg";
+import securityHeroBg from "@/assets/security-hero-bg.jpg";
 
 const SecurityServicesPage = () => {
   const services = [
@@ -61,12 +62,20 @@ const SecurityServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 gradient-subtle">
+      <section 
+        className="pt-32 pb-20 relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${securityHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8 animate-fade-in-up">
             <Link 
               to="/services" 
-              className="inline-flex items-center space-x-2 text-tech-teal hover:text-tech-blue transition-colors duration-300 animated-underline"
+              className="inline-flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-300 animated-underline"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Services</span>
@@ -77,12 +86,12 @@ const SecurityServicesPage = () => {
                 <Shield className="w-8 h-8 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-responsive-xl font-bold text-tech-blue">Security Solutions</h1>
-                <p className="text-tech-teal font-semibold text-xl">Protecting Your Assets</p>
+                <h1 className="text-responsive-xl font-bold text-white drop-shadow-lg">Security Solutions</h1>
+                <p className="text-white/90 font-semibold text-xl drop-shadow-md">Protecting Your Assets</p>
               </div>
             </div>
             
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl leading-relaxed">
+            <p className="text-lg lg:text-xl text-white/90 max-w-4xl leading-relaxed drop-shadow-md">
               Comprehensive security infrastructure solutions designed to protect your business, assets, and personnel 
               with cutting-edge technology and professional monitoring services.
             </p>
