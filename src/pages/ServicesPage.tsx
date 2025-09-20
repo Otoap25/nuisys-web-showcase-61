@@ -8,6 +8,7 @@ import securityImage from "@/assets/security-systems.jpg";
 import infrastructureImage from "@/assets/infrastructure.jpg";
 import powerImage from "@/assets/power-solutions.jpg";
 import cloudImage from "@/assets/cloud-ai.jpg";
+import serviceDepartmentsBg from "@/assets/service-departments-bg.jpg";
 
 const ServicesPage = () => {
   const departments = [
@@ -70,21 +71,29 @@ const ServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 gradient-subtle">
+      <section 
+        className="pt-32 pb-20 relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${serviceDepartmentsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 animate-fade-in-up">
             <Link 
               to="/" 
-              className="inline-flex items-center space-x-2 text-tech-teal hover:text-tech-blue transition-colors duration-300 mb-6 animated-underline"
+              className="inline-flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-300 mb-6 animated-underline"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Home</span>
             </Link>
             
-            <h1 className="text-responsive-xl font-bold text-tech-blue">
+            <h1 className="text-responsive-xl font-bold text-white drop-shadow-lg">
               Our Service Departments
             </h1>
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
               Specialized teams delivering comprehensive IT solutions across all technology domains with 
               cutting-edge expertise and 24/7 support.
             </p>
